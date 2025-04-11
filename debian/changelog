@@ -1,3 +1,9 @@
+edi-resize-rootfs (1.0.1) noble; urgency=medium
+
+  * Fixed GitHub actions build.
+
+ -- Matthias Luescher <lueschem@gmail.com>  Fri, 11 Apr 2025 15:57:10 +0200
+
 edi-resize-rootfs (1.0.0) noble; urgency=medium
 
   * Initial release. 
