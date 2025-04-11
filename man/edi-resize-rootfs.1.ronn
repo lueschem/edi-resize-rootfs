@@ -1,0 +1,19 @@
+edi-resize-rootfs(1) -- Embedded Development Infrastructure Rootfs Resizer
+==========================================================================
+
+## SYNOPSIS
+
+`edi-resize-rootfs`
+
+## DESCRIPTION
+
+Small utility that helps to adjust the partitions on the first boot.
+
+## COPYRIGHT
+
+**edi-resize-rootfs** is copyright (c) 2025, Matthias Luescher. Released
+under the GNU Lesser General Public License.
+
+## SEE ALSO
+
+https://www.get-edi.io

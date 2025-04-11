@@ -1,0 +1,18 @@
+Source: edi-resize-rootfs
+Section: devel
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               ronn,
+Maintainer: Matthias Luescher <lueschem@gmail.com>
+Standards-Version: 3.9.8
+
+Package: edi-resize-rootfs
+Architecture: all
+Depends: ${misc:Depends},
+         e2fsprogs,
+         fdisk,
+         mount,
+         parted,
+         systemd
+Description: Embedded Development Infrastructure Rootfs Resizer
+ Small utility that helps to adjust the partitions on the first boot.

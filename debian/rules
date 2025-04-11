@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+#DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_installinit:
+	true
+
+override_dh_auto_build:
+	dh_auto_build
+	ronn man/edi-resize-rootfs.1.ronn
+

@@ -1,0 +1,15 @@
+# debian
+debian/edi-resize-rootfs/
+debian/edi-resize-rootfs.*.debhelper
+debian/debhelper-build-stamp
+debian/edi-resize-rootfs.debhelper.log
+debian/edi-resize-rootfs.substvars
+debian/.debhelper
+debian/files
+
+# development IDEs
+.idea/
+
+# man page
+/man/edi-resize-rootfs.1
+/man/edi-resize-rootfs.1.html

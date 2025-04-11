@@ -1,0 +1,5 @@
+edi-resize-rootfs (1.0.0) stable; urgency=medium
+
+  * Initial release.
+
+ -- Matthias Luescher <lueschem@gmail.com>  Fri, 11 Apr 2025 14:34:48 +0200
