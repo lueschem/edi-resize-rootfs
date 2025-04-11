@@ -53,7 +53,7 @@ fi
 
 sudo -H -u ${TESTUSER} git clone .git ${TESTUSERHOME}/${PACKAGE_NAME}
 
-apt-get -y --no-install-recommends install dh-make equivs lintian > /dev/null
+apt-get -y --no-install-recommends install devscripts dh-make equivs lintian > /dev/null
 
 CONTAINER_WORK="${TESTUSERHOME}/${PACKAGE_NAME}"
 cd ${CONTAINER_WORK}
