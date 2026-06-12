@@ -14,5 +14,6 @@ Depends: ${misc:Depends},
          mount,
          parted,
          systemd
+Recommends: btrfs-progs
 Description: Embedded Development Infrastructure Rootfs Resizer
  Small utility that helps to adjust the partitions on the first boot.
