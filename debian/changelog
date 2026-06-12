@@ -1,3 +1,9 @@
+edi-resize-rootfs (1.1.1) resolute; urgency=medium
+
+  * Use latest GitHub actions.
+
+ -- Matthias Luescher <lueschem@gmail.com>  Fri, 12 Jun 2026 11:53:01 +0200
+
 edi-resize-rootfs (1.1.0) resolute; urgency=medium
 
   * Enable resizing of btrfs root file systems.
