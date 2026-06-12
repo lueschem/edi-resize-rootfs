@@ -158,7 +158,12 @@ if [ "$(( ROOTFS_START_S + ROOTFS_SIZE_S + 2 * MIB_ALIGNMENT_S + BACKUP_TABLE_SI
     partprobe
 fi
 
-resize2fs /dev/"${ROOT_PART}"
+ROOTFS_TYPE="$(lsblk -n -o FSTYPE /dev/"${ROOT_PART}")"
+if [ "${ROOTFS_TYPE}" == "btrfs" ] ; then
+    btrfs filesystem resize max /
+else
+    resize2fs /dev/"${ROOT_PART}"
+fi
 
 print_and_exit "INFO" "disk layout of ${ROOT_DEV} successfully changed"
 
