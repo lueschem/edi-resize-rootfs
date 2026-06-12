@@ -159,6 +159,7 @@ if [ "$(( ROOTFS_START_S + ROOTFS_SIZE_S + 2 * MIB_ALIGNMENT_S + BACKUP_TABLE_SI
 fi
 
 ROOTFS_TYPE="$(lsblk -n -o FSTYPE /dev/"${ROOT_PART}")"
+echo "detected /dev/${ROOT_PART} as ${ROOTFS_TYPE}"
 if [ "${ROOTFS_TYPE}" == "btrfs" ] ; then
     btrfs filesystem resize max /
 else
