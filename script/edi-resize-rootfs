@@ -154,10 +154,10 @@ if [ "$(( ROOTFS_START_S + ROOTFS_SIZE_S + 2 * MIB_ALIGNMENT_S + BACKUP_TABLE_SI
     echo "/dev/${NEW_ROOT_PART}: start=$(( ROOTFS_START_S + SPLIT_SIZE_S )) size=${REMAINING_SIZE_S}, type=${ROOTFS_PARTITION_TYPE}" >> "${TEMP_PARTITION_TABLE}"
 
     sfdisk --no-reread /dev/${ROOT_DEV} < "${TEMP_PARTITION_TABLE}"
-
-    partprobe
 fi
 
+# Without partprobe lsblk will not be able to find out the root file system type:
+partprobe
 ROOTFS_TYPE="$(lsblk -n -o FSTYPE /dev/"${ROOT_PART}")"
 echo "detected /dev/${ROOT_PART} as ${ROOTFS_TYPE}"
 if [ "${ROOTFS_TYPE}" == "btrfs" ] ; then
